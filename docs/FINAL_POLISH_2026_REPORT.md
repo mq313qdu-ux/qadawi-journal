@@ -81,6 +81,8 @@
 
 `npm run lint` و`npm run check` و`npm test` و`npm run build` ناجحة. فحص الصياغة يشمل 15 وحدة تطبيق، ومدقق التوزيع 39 أصلًا دون شبكة، بالإضافة للمسارات النسبية والرخص/الخطوط والأيقونات والمانيفست و RTL/CSP. المشروع ESM JavaScript، فلا مترجم TypeScript أو تحذيرات React/Hydration تُدّعى. سير GitHub Actions يجري الفحوص قبل نشر `dist` فقط. حالة النشر وسجل الفحوص متاحان في [GitHub Actions](https://github.com/mq313qdu-ux/qadawi-journal/actions/workflows/pages.yml). نتيجة الرابط الحي تؤكد في رسالة تسليم الإصدار؛ لا أسرار في المصدر.
 
+نُشرت النسخة التطبيقية `8f3e7ac` بنجاح عبر [تشغيل GitHub Pages رقم37131631960](https://github.com/mq313qdu-ux/qadawi-journal/actions/runs/37131631960). فحص [الرابط الحي](https://mq313qdu-ux.github.io/qadawi-journal/) في سياق مؤقت اجتاز الواجهة المكتبية والهاتف الليلي،11 معاينة خط، وجميع العائلات السبع مع حفظ الاختيار الفعلي وإعادة التحميل دون شبكة، وكاشv5 الخاص بالنطاق، دون أخطاءconsole أو موارد. تحديث الاختبار والتوثيق التالي لا يغيّر ملفات التطبيق المنشورة.
+
 ## 17. Remaining blocked items
 
 | الفحص المحدد | السبب الدقيق | المحاولة | الخطوة الآمنة التالية |
