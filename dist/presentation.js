@@ -1,7 +1,7 @@
 /* Presentation only: no journal data, database access, or network requests. */
 const normal = value => value.normalize('NFKC').replace(/[إأآ]/g,'ا').replace(/ى/g,'ي').toLocaleLowerCase();
 let observedNavigation, navigationObserver;
-export function polishView(root, route) {
+export function polishView(root, route, icon=()=>'') {
   const navigation=document.querySelector('.mobile-nav');if(navigation&&navigation!==observedNavigation){navigationObserver?.disconnect();observedNavigation=navigation;navigationObserver=new ResizeObserver(()=>document.documentElement.style.setProperty('--mobile-nav-height',`${navigation.getBoundingClientRect().height}px`));navigationObserver.observe(navigation)}
   root.querySelectorAll('input:not([type]), input[type=text], textarea').forEach(el=>{el.dir='auto'});
   root.querySelectorAll('.page-heading').forEach(el=>{el.dataset.section=route});
@@ -11,6 +11,7 @@ export function polishView(root, route) {
     const title=root.querySelector('[name=entry-title]');if(title)title.placeholder='عنوان بسيط، إذا تحب';
   }
   if(route==='calendar'){for(const [action,symbol,label] of [['month-prev','›','الشهر السابق'],['month-next','‹','الشهر التالي']]){const control=root.querySelector(`[data-action=${action}]`);if(control){control.textContent=symbol;control.setAttribute('aria-label',label);control.title=label}}}
+  if(route==='memories'){root.querySelectorAll('.collection').forEach(button=>{const span=document.createElement('span');span.className='collection-symbol';const symbols={favorite:'heart',important:'star',funny:'sun',first:'spark',achievement:'star',lesson:'book',difficult:'heart',revisit:'reset',quote:'pen',never:'lock',turning:'place'};span.innerHTML=icon(symbols[button.dataset.filter]||'vault');button.prepend(span)})}
   if(route==='settings') {
     const sections=[...root.querySelectorAll('.settings-section')];const nav=document.createElement('nav');nav.className='settings-index';nav.setAttribute('aria-label','أقسام الإعدادات');
     sections.forEach((section,i)=>{section.id=`settings-group-${i}`;const link=document.createElement('a');link.href=`#${section.id}`;link.textContent=section.querySelector('h2').textContent;nav.append(link)});root.querySelector('.reading')?.prepend(nav);
