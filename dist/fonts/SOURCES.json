@@ -1,0 +1,78 @@
+{
+  "sourceCommit": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+  "compression": "WOFF2 lossless outline/shaping compression; variable wght limited to 400â€“700; optional HEXP fixed at default",
+  "fonts": [
+    {
+      "file": "alexandria.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/alexandria/Alexandria%5Bwght%5D.ttf",
+      "sourceSha256": "db8ae03b62d55a65aa4e04307878df8c00d6e5388e4800635cbe0e22b6411b64",
+      "sha256": "45d566cdfce06f101b01c3dee0df9e0e9ac777e4f7b1ea8a77acb8326c307476",
+      "bytes": 92664,
+      "license": "alexandria-OFL.txt"
+    },
+    {
+      "file": "readex.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/readexpro/ReadexPro%5BHEXP%2Cwght%5D.ttf",
+      "sourceSha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "sha256": "751da744292f671ca1e9ee2447c6590d5878bfb7b4413d9dd7855a24426ddde6",
+      "bytes": 59720,
+      "license": "readexpro-OFL.txt"
+    },
+    {
+      "file": "tajawal-regular.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/tajawal/Tajawal-Regular.ttf",
+      "sourceSha256": "6882892da3e03527d5db2bbab3b48bde6ef2e878a43f522d1a4eebda90010a19",
+      "sha256": "9a076d825d71d8647c620d066cbea250019c52a16d22544eccb5f312e5f3575f",
+      "bytes": 20764,
+      "license": "tajawal-OFL.txt"
+    },
+    {
+      "file": "tajawal-medium.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/tajawal/Tajawal-Medium.ttf",
+      "sourceSha256": "1ff8bd943a261c9dd7906bdb1993cab87b6d925a7fb5f848cdb51ed301531090",
+      "sha256": "3a2aa32adf63373fc6fa1a4e832ebb5608483cf215c6e080b5d61420b88d9a19",
+      "bytes": 20708,
+      "license": "tajawal-OFL.txt"
+    },
+    {
+      "file": "tajawal-bold.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/tajawal/Tajawal-Bold.ttf",
+      "sourceSha256": "0342ab6b74b6bd1b4b5bf7beda45a9734a2b3147a31e8a3a45b6a3417a52d9d7",
+      "sha256": "2ace27038267ac643371ed013de3f0919cc84942f00c9e6ed4027d647ba0596b",
+      "bytes": 20996,
+      "license": "tajawal-OFL.txt"
+    },
+    {
+      "file": "almarai-regular.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/almarai/Almarai-Regular.ttf",
+      "sourceSha256": "5b5cad33c8e5922083728d271cdcda91f96ba291f1307eccc4f4ef732dc19622",
+      "sha256": "6efe950f47e19c4d1b59ebf566bb79e8ea76874f482fe51d20fbfaae699889c4",
+      "bytes": 49320,
+      "license": "almarai-OFL.txt"
+    },
+    {
+      "file": "almarai-bold.woff2",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/almarai/Almarai-Bold.ttf",
+      "sourceSha256": "06401391b5b39fbcf2bc0c6a6e03faf992435e7b011183a1861737e913af8613",
+      "sha256": "7d6abecbe4f4acccbafbef6c69ae064edd5bdc413f3968ab716d3131d92a675c",
+      "bytes": 50584,
+      "license": "almarai-OFL.txt"
+    },
+    {
+      "file": "cairo.woff2",
+      "source": "scripts/font-sources/cairo.ttf (preserved official source from previous Qadawi version)",
+      "sha256": "e147fc31f74a0237775792d531bd502ea37ff09819415f50f29b8c2fe92c83f5",
+      "bytes": 127072,
+      "license": "Cairo-OFL.txt",
+      "sourceSha256": "667c987182391c91f4e57a2f455b1794fb5e3ee6ca4ef3383e86bb690fa9c964"
+    },
+    {
+      "file": "naskh.woff2",
+      "source": "scripts/font-sources/naskh.ttf (preserved official source from previous Qadawi version)",
+      "sha256": "929f0e548d54683dc0ed87bdaf264e122c0381d39756fa846713b32d0b41e503",
+      "bytes": 123508,
+      "license": "Naskh-OFL.txt",
+      "sourceSha256": "67b5a525a661b607971fbd3f96a81b89d3a768e74534fca84f18ac97e6fab72f"
+    }
+  ]
+}

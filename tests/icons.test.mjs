@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {icon} from '../dist/icons.js';
+test('Local SVG family has consistent geometry and decorative semantics',()=>{for(const n of ['book','calendar','search','palette','mic','photo','people','trash','chevron','chevron-right']){const svg=icon(n);assert.match(svg,/viewBox="0 0 24 24"/);assert.match(svg,/aria-hidden="true"/);assert.match(svg,/stroke="currentColor"/)}assert.match(icon('logo'),/viewBox="0 0 64 64"/)});
+test('Imported unknown icon names cannot inject SVG attributes',()=>{assert.equal(icon('constructor'),icon('book'));assert.equal(icon('x" onload="alert(1)'),icon('book'))});

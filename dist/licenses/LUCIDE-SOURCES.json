@@ -1,0 +1,141 @@
+{
+  "commit": "500620a2e8123f8d1db191538886dc0c223f69a9",
+  "source": "https://github.com/lucide-icons/lucide",
+  "icons": [
+    {
+      "alias": "book",
+      "source": "icons/book-open.svg",
+      "sha256": "9b9bed0ff057283d5c5c5a1c71f8d3e927db26a56639603a92fdf7b25961510e"
+    },
+    {
+      "alias": "sun",
+      "source": "icons/sun.svg",
+      "sha256": "a3955c8b0425fcc5c9ba12d2bdd77fe53b2cd5dd05e7742a56f342e996fb2ef8"
+    },
+    {
+      "alias": "calendar",
+      "source": "icons/calendar-days.svg",
+      "sha256": "9330eb8d7c4989e97b6361314abbf02953243c602874725c9e58ceca00da3bd7"
+    },
+    {
+      "alias": "vault",
+      "source": "icons/archive.svg",
+      "sha256": "78c732e34e232db63af06a2330b4448045cfdf49b48b59f2d31922df54c7bb17"
+    },
+    {
+      "alias": "chart",
+      "source": "icons/chart-no-axes-column.svg",
+      "sha256": "5dfd8fc5b5417dad858991de4969c3fe1c4a466104d0880a15b691ff7c5b1f12"
+    },
+    {
+      "alias": "search",
+      "source": "icons/search.svg",
+      "sha256": "283d371c2e433817bb9c0c8310caa6c77fa4177c0f4f1168d9c83b97af7389dc"
+    },
+    {
+      "alias": "settings",
+      "source": "icons/sliders-horizontal.svg",
+      "sha256": "e43a00e5eb684e6cbb61083bed2528d7a3fa5f265693eb2b5f314cd432aa65f4"
+    },
+    {
+      "alias": "plus",
+      "source": "icons/plus.svg",
+      "sha256": "7f6af73bf1ff6c4bca3f18351c8d1bdec6749c0c2530c4de5da85d520c21df17"
+    },
+    {
+      "alias": "pen",
+      "source": "icons/pen-line.svg",
+      "sha256": "43c431457784ab409341b549119257111385e5af0a36dee08f37c91259c08799"
+    },
+    {
+      "alias": "lock",
+      "source": "icons/lock-keyhole.svg",
+      "sha256": "fc0b8b7590d1d9e9bb0112c5c2e15a78ade0bfeca6d6f8c79fbbe149236d74be"
+    },
+    {
+      "alias": "close",
+      "source": "icons/x.svg",
+      "sha256": "4a9cdab38fbb96162e7dace28e33f4ca0e49d8963a6162abc3d4691b7d675117"
+    },
+    {
+      "alias": "star",
+      "source": "icons/star.svg",
+      "sha256": "c59da86b889569387db28e69ad00a89f96af22863ad9eea9aa12c4876a14338c"
+    },
+    {
+      "alias": "mic",
+      "source": "icons/mic.svg",
+      "sha256": "9b940cd735d1ffa270ba670c4e677d9a09400f3fa81d6b3f405b12a3b67a59a8"
+    },
+    {
+      "alias": "photo",
+      "source": "icons/image.svg",
+      "sha256": "619c9db58c879dce6250376ba67d9c9102ca6dbb3b1efb9294c9f180e22273a5"
+    },
+    {
+      "alias": "check",
+      "source": "icons/check.svg",
+      "sha256": "7f33acc9a77a61659531044525fc008edebe215bf4dcf1c789c8674ad3277db0"
+    },
+    {
+      "alias": "download",
+      "source": "icons/download.svg",
+      "sha256": "3daeee13ded5a3afa2198b1bb4e2262d163922f97d96ac6ff9953e8ed4fe039d"
+    },
+    {
+      "alias": "people",
+      "source": "icons/users-round.svg",
+      "sha256": "8b41ee3ada1609e25a410d64056aa333952cf27d770f0c379a100065270de7f7"
+    },
+    {
+      "alias": "place",
+      "source": "icons/map-pin.svg",
+      "sha256": "16f1042a62f1bda20ebab8bfc1cb79c0be285c980dea6c2c733a17902631405b"
+    },
+    {
+      "alias": "chevron",
+      "source": "icons/chevron-left.svg",
+      "sha256": "83b0681aa38bf55e9d52a1e4b4cced624abe1fe7678ecafda133a574f1161d93"
+    },
+    {
+      "alias": "chevron-right",
+      "source": "icons/chevron-right.svg",
+      "sha256": "2758143d7b2434e4aa7307dfd34405c87909ff4052f21b5f3f40d45224b4f19b"
+    },
+    {
+      "alias": "trash",
+      "source": "icons/trash.svg",
+      "sha256": "27299f69ad7c6272be64b1b8e2d48cbd6dcf0ef0d4f92827a1affa945c91700e"
+    },
+    {
+      "alias": "palette",
+      "source": "icons/palette.svg",
+      "sha256": "8e7d3fde990cffd10469ba351f27c50202b057a9bb9af5626322e53fd3abc78c"
+    },
+    {
+      "alias": "reset",
+      "source": "icons/rotate-ccw.svg",
+      "sha256": "622685386ab4017eabfde01cd74550a20b1924df233b353f73b6b155371f2afd"
+    },
+    {
+      "alias": "menu",
+      "source": "icons/menu.svg",
+      "sha256": "af6491988ac1ba30dc5414f485bc48713e957e1edb0fbef4a0dd8691c3c21598"
+    },
+    {
+      "alias": "arrow",
+      "source": "icons/arrow-right.svg",
+      "sha256": "288397fdb73bb4f783cf9eabb726ff47357df1d4e3f1201dd748090579f108b9"
+    },
+    {
+      "alias": "spark",
+      "source": "icons/sparkles.svg",
+      "sha256": "f5499f33f09d7158151e9bd2ec0faf79ff8fb57292f84fdd7286d96d0f0424d8"
+    },
+    {
+      "alias": "heart",
+      "source": "icons/heart.svg",
+      "sha256": "70af5f30be9fcb500b852556b38dcdf8c04a4ba81fd262534fb0336bd39b3b52"
+    }
+  ]
+}

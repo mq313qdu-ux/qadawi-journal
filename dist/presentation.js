@@ -3,7 +3,7 @@ import {enhanceWorkspace,highlightText} from './workspace.js';
 const normal = value => value.normalize('NFKC').replace(/[إأآ]/g,'ا').replace(/ى/g,'ي').toLocaleLowerCase();
 let observedNavigation, navigationObserver;
 export function polishView(root, route, icon=()=>'') {
-  const navigation=document.querySelector('.mobile-nav');if(navigation&&navigation!==observedNavigation){navigationObserver?.disconnect();observedNavigation=navigation;navigationObserver=new ResizeObserver(()=>document.documentElement.style.setProperty('--mobile-nav-height',`${navigation.getBoundingClientRect().height}px`));navigationObserver.observe(navigation)}
+  const navigation=document.querySelector('.mobile-nav');if(navigation&&navigation!==observedNavigation){navigationObserver?.disconnect();observedNavigation=navigation;navigationObserver=new ResizeObserver(()=>{const height=navigation.getBoundingClientRect().height;if(height>0)document.documentElement.style.setProperty('--mobile-nav-height',`${Math.ceil(height)}px`)});navigationObserver.observe(navigation)}
   root.querySelectorAll('input:not([type]), input[type=text], textarea').forEach(el=>{el.dir='auto'});
   root.querySelectorAll('.page-heading').forEach(el=>{el.dataset.section=route});
   if(route==='free') {
@@ -11,7 +11,7 @@ export function polishView(root, route, icon=()=>'') {
     if(note){const details=document.createElement('details');details.className='composition-help';const summary=document.createElement('summary');summary.textContent='كيف نرتّب كلماتك؟';note.before(details);details.append(summary,note)}
     const title=root.querySelector('[name=entry-title]');if(title)title.placeholder='عنوان بسيط، إذا تحب';
   }
-  if(route==='calendar'){for(const [action,symbol,label] of [['month-prev','›','الشهر السابق'],['month-next','‹','الشهر التالي']]){const control=root.querySelector(`[data-action=${action}]`);if(control){control.textContent=symbol;control.setAttribute('aria-label',label);control.title=label}}}
+  if(route==='calendar'){for(const [action,symbol,label] of [['month-prev','chevron-right','الشهر السابق'],['month-next','chevron','الشهر التالي']]){const control=root.querySelector(`[data-action=${action}]`);if(control){control.innerHTML=icon(symbol);control.setAttribute('aria-label',label);control.title=label}}}
   if(route==='memories'){root.querySelectorAll('.collection').forEach(button=>{const span=document.createElement('span');span.className='collection-symbol';const symbols={favorite:'heart',important:'star',funny:'sun',first:'spark',achievement:'star',lesson:'book',difficult:'heart',revisit:'reset',quote:'pen',never:'lock',turning:'place'};span.innerHTML=icon(symbols[button.dataset.filter]||button.dataset.icon||'vault');button.prepend(span)})}
   enhanceWorkspace(root,route,icon);
   if(route==='free') {

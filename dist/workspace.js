@@ -55,9 +55,10 @@ function organizeSettings(root,icon){
   container.replaceChildren();const nav=document.createElement('nav');nav.className='settings-index';nav.setAttribute('aria-label','أقسام الإعدادات');
   const select=document.createElement('select');select.className='settings-mobile-select';select.setAttribute('aria-label','قسم الإعدادات');
   const content=document.createElement('div');content.className='settings-content';
-  const activate=id=>{settingsCategory=id;panels.forEach(p=>{p.section.hidden=p.id!==id;const b=nav.querySelector(`[data-category="${p.id}"]`);b.setAttribute('aria-current',p.id===id?'page':'false')});select.value=id};
-  panels.forEach(p=>{const button=document.createElement('button');button.type='button';button.dataset.category=p.id;button.innerHTML=icon(p.symbol);const label=document.createElement('span');label.textContent=p.title;button.append(label);button.addEventListener('click',()=>activate(p.id));nav.append(button);const option=document.createElement('option');option.value=p.id;option.textContent=p.title;select.append(option);content.append(p.section)});
-  select.addEventListener('change',()=>activate(select.value));container.append(nav,select,content);activate(panels.some(p=>p.id===settingsCategory)?settingsCategory:'appearance');
+  const activate=(id,scroll=false)=>{settingsCategory=id;panels.forEach(p=>{p.section.hidden=p.id!==id;const b=nav.querySelector(`[data-category="${p.id}"]`);b.setAttribute('aria-current',p.id===id?'page':'false')});select.value=id;if(scroll)requestAnimationFrame(()=>window.scrollTo({top:Math.max(0,container.getBoundingClientRect().top+window.scrollY-24),behavior:'instant'}))};
+  panels.forEach(p=>{const button=document.createElement('button');button.type='button';button.dataset.category=p.id;button.innerHTML=icon(p.symbol);const label=document.createElement('span');label.textContent=p.title;button.append(label);button.addEventListener('click',()=>activate(p.id,true));nav.append(button);const option=document.createElement('option');option.value=p.id;option.textContent=p.title;select.append(option);content.append(p.section)});
+  nav.addEventListener('keydown',e=>{const buttons=[...nav.querySelectorAll('button')],index=buttons.indexOf(document.activeElement);if(index<0||!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?buttons.length-1:Math.min(buttons.length-1,Math.max(0,index+(e.key==='ArrowDown'?1:-1)));buttons[next].focus();buttons[next].click()});
+  select.addEventListener('change',()=>activate(select.value,true));container.append(nav,select,content);activate(panels.some(p=>p.id===settingsCategory)?settingsCategory:'appearance');
 }
 
 export function excerpt(text,query,limit=180){
