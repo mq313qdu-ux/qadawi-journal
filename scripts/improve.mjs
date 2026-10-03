@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const file='dist/journal.js';let s=await readFile(file,'utf8');
+s=s.replace("for await(const batch of db.scan(kind))records[kind].push(...batch)","for await(const batch of db.scan(kind,{from:filters.from||'',to:filters.to||'\\uffff'}))records[kind].push(...(kind==='media'?batch.map(m=>({date:m.date,mime:m.mime,targetId:m.targetId})):batch))");
+s=s.replace("const media=await db.all('media');if(!c.content.trim()", "const media=await db.page('media',{date:c.date,limit:1000});if(!c.content.trim()");
+s=s.replace("const media=await db.all('media');if(!e.description.trim()", "const media=await db.page('media',{date:e.date,limit:1000});if(!e.description.trim()");
+s=s.replace("(await db.all('media')).filter(m=>m.targetId===c.id)","(await db.page('media',{date:c.date,limit:1000})).filter(m=>m.targetId===c.id)");
+s=s.replace("(await db.all('media')).filter(m=>m.targetId===r.id)","(await db.page('media',{date:r.date,limit:1000})).filter(m=>m.targetId===r.id)");
+s=s.replace("const phrase=emotionChoices.map", "day.metadata.emotionsRecorded=emotionChoices.length>0;await save(day);const phrase=emotionChoices.map");
+s=s.replace("day.entryContent||day.session||events.length||day.rawResponses.length", "day.entryContent||day.session||events.length||day.rawResponses.length||day.metadata.emotionsRecorded");
+s=s.replace("e.timeConfidence=value", "e.timeConfidence=value");
+s=s.replace("timeConfidence:value('confidence'),locationName", "timeConfidence:value('confidence'),memoryConfidence:value('memory-confidence')||'certain',locationName");
+s=s.replace("<details ${id?'open':''}><summary>وقت، مكان", "<label for=\"f-memory-confidence\">مدى تأكدك من الذكرى</label><select id=\"f-memory-confidence\" name=\"memory-confidence\">${[['certain','متأكد'],['approximate','تفاصيل تقريبية'],['unsure','أعتقد أنه حدث، لكني مو متأكد']].map(([v,t])=>`<option value=\"${v}\" ${(e.memoryConfidence||'certain')===v?'selected':''}>${t}</option>`).join('')}</select><details ${id?'open':''}><summary>وقت، مكان");
+await writeFile(file,s);
