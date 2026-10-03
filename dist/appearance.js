@@ -1,7 +1,7 @@
 /* The appearance preferences use the existing settings record. No journal schema changes. */
 export const defaultAppearance=()=>({palette:'sand',uiFont:'cairo',readingFont:'cairo',fontWeight:'500',density:'comfortable',corners:'soft',sidebarTone:'dark',sidebarSide:'right',navigationStyle:'labels',readingWidth:'comfortable',readingLineHeight:'2',customAccent:'#8a593e',customBackground:'#f8f4ed',showWeek:true,showOnThisDay:true,showEmotionHelper:true,showDailyModes:true,reduceMotion:false,defaultMode:'normal'});
 const palettes={
- sand:{light:['#f8f4ed','#fffdf9','#302820','#77685b','#e7ddcf','#865438','#f0e3d3','#8a6444'],dark:['#201a17','#2b231e','#f7eadc','#c7b5a3','#4c3b2f','#e3b48d','#3b2e24','#e3b48d'],nav:'#302720'},
+ sand:{light:['#f8f4ed','#fffdf9','#302820','#77685b','#e7ddcf','#865438','#f0e3d3','#8a6444'],dark:['#1c1d1e','#252729','#eee9e2','#bdb6ae','#424241','#dfb58f','#35322e','#d9b894'],nav:'#302720'},
  cocoa:{light:['#f4f0ed','#fffcfa','#332824','#78665e','#e4d8d1','#734c3d','#ede1d9','#8e6b54'],dark:['#211b19','#2d2420','#f7eee8','#c6b3a7','#4e3c33','#dfb9a2','#3d2d25','#e2bd9f'],nav:'#2e2420'},
  olive:{light:['#f6f4ea','#fffef8','#313226','#70715d','#dfdfca','#5b6040','#e9eadb','#7b7450'],dark:['#202118','#2a2d20','#f2f1e2','#bec1a5','#474b35','#c4ce99','#363e27','#d3cb99'],nav:'#2c3022'},
  ink:{light:['#f2f4f7','#ffffff','#252f40','#626f82','#dce2eb','#405d83','#e6edf5','#687e97'],dark:['#18202b','#222e3e','#eaf0f9','#aebed3','#3d506b','#a9c7ed','#293d57','#b5c8e0'],nav:'#263347'}
